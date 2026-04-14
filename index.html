@@ -12,7 +12,6 @@ body {
   color: white;
 }
 
-/* HOME */
 .home {
   height: 100vh;
   display: flex;
@@ -31,7 +30,6 @@ h1 {
   font-size: 22px;
 }
 
-/* BOTONES */
 button {
   width: 90%;
   max-width: 300px;
@@ -44,7 +42,6 @@ button {
   color: black;
 }
 
-/* SECCIONES */
 .seccion {
   display: none;
   min-height: 100vh;
@@ -53,7 +50,6 @@ button {
   padding: 10px;
 }
 
-/* ITEMS */
 .item {
   display: flex;
   align-items: center;
@@ -74,7 +70,6 @@ button {
   flex: 1;
 }
 
-/* MODAL */
 .modal {
   position: fixed;
   width: 100%;
@@ -102,49 +97,12 @@ button {
 
 <body>
 
-<!-- INICIO -->
 <div class="home" id="inicio">
   <img src="logo.png" class="logo">
   <h1>Magma's Club</h1>
 
   <button onclick="mostrar('comidas')">🍽 COMIDAS</button>
   <button onclick="mostrar('bebidas')">🥤 BEBIDAS</button>
-</div>
-
-<!-- COMIDAS -->
-<div class="seccion" id="comidas" style="background-image:url('fondo-comidas.jpg')">
-
-<button onclick="volver()">⬅ Volver</button>
-<img src="logo.png" class="logo">
-
-<div class="item" onclick="ver('Cuy Entero','Crocante','S/.60','cuy-entero.jpg')">
-<img src="cuy-entero.jpg"><span>Cuy Entero</span><b>S/.60</b>
-</div>
-
-<div class="item" onclick="ver('Medio Cuy','Crocante','S/.30','medio-cuy.jpg')">
-<img src="medio-cuy.jpg"><span>1/2 Cuy</span><b>S/.30</b>
-</div>
-
-<div class="item" onclick="ver('Trucha','Fresca','S/.20','trucha.jpg')">
-<img src="trucha.jpg"><span>Trucha</span><b>S/.20</b>
-</div>
-
-<div class="item" onclick="ver('Chicharrón','Crujiente','S/.20','chicharron.jpg')">
-<img src="chicharron.jpg"><span>Chicharrón</span><b>S/.20</b>
-</div>
-
-<div class="item" onclick="ver('Parrilla Mixta','Variado','S/.30','parrilla.jpg')">
-<img src="parrilla.jpg"><span>Parrilla Mixta</span><b>S/.30</b>
-</div>
-
-<div class="item" onclick="ver('Pollo','Parrilla','S/.20','pollo.jpg')">
-<img src="pollo.jpg"><span>Pollo</span><b>S/.20</b>
-</div>
-
-<div class="item" onclick="ver('Chuleta','Parrilla','S/.20','chuleta.jpg')">
-<img src="chuleta.jpg"><span>Chuleta</span><b>S/.20</b>
-</div>
-
 </div>
 
 <!-- BEBIDAS -->
