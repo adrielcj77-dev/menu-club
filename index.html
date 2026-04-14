@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <head>
-<meta charset="UTF-8">
-
-<!-- 🔥 ESTA ES LA CLAVE PARA CELULAR -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Magma's Club Campestre</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial;
-  color: white;
-}
-</style>
-
-</head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Magma's Club Campestre</title>
@@ -73,7 +56,7 @@ button {
   padding: 10px;
 }
 
-/* ITEMS MÁS COMPACTOS */
+/* ITEMS */
 .item {
   display: flex;
   align-items: center;
@@ -173,19 +156,19 @@ button {
 <b>S/.20</b>
 </div>
 
-<div class="item" onclick="ver('Parrilla','Mixta','S/.30','parrilla.jpg')">
+<div class="item" onclick="ver('Parrilla Mixta','Variedad de carnes','S/.30','parrilla.jpg')">
 <img src="parrilla.jpg">
-<span>Parrilla</span>
+<span>Parrilla Mixta</span>
 <b>S/.30</b>
 </div>
 
-<div class="item" onclick="ver('Pollo','Parrilla','S/.20','pollo.jpg')">
+<div class="item" onclick="ver('Pollo a la Parrilla','Jugoso','S/.20','pollo.jpg')">
 <img src="pollo.jpg">
 <span>Pollo</span>
 <b>S/.20</b>
 </div>
 
-<div class="item" onclick="ver('Chuleta','Parrilla','S/.20','chuleta.jpg')">
+<div class="item" onclick="ver('Chuleta a la Parrilla','Doradita','S/.20','chuleta.jpg')">
 <img src="chuleta.jpg">
 <span>Chuleta</span>
 <b>S/.20</b>
@@ -199,16 +182,51 @@ button {
 <button class="back" onclick="volver()">⬅ Volver</button>
 <img src="logo.png" class="logo">
 
-<div class="item" onclick="ver('Inca Kola','Refresco','S/.3.50','inca.jpg')">
+<h1>Bebidas</h1>
+
+<!-- INCA KOLA -->
+<div class="item" onclick="ver('Inca Kola Personal','Botella personal','S/.3.50','inca.jpg')">
 <img src="inca.jpg">
-<span>Inca Kola</span>
+<span>Inca Kola Personal</span>
 <b>S/.3.50</b>
 </div>
 
-<div class="item" onclick="ver('Coca Cola','Refresco','S/.3.50','coca.jpg')">
+<div class="item" onclick="ver('Inca Kola 1 Litro','Botella mediana','S/.7.00','inca.jpg')">
+<img src="inca.jpg">
+<span>Inca Kola 1L</span>
+<b>S/.7.00</b>
+</div>
+
+<div class="item" onclick="ver('Inca Kola 1.5 Litros','Botella grande','S/.10.00','inca.jpg')">
+<img src="inca.jpg">
+<span>Inca Kola 1.5L</span>
+<b>S/.10.00</b>
+</div>
+
+<!-- COCA COLA -->
+<div class="item" onclick="ver('Coca Cola Personal','Botella personal','S/.3.50','coca.jpg')">
 <img src="coca.jpg">
-<span>Coca Cola</span>
+<span>Coca Cola Personal</span>
 <b>S/.3.50</b>
+</div>
+
+<!-- CERVEZAS -->
+<div class="item" onclick="ver('Pilsen 750ml','Cerveza clásica','S/.10.00','pilsen.jpg')">
+<img src="pilsen.jpg">
+<span>Pilsen 750ml</span>
+<b>S/.10.00</b>
+</div>
+
+<div class="item" onclick="ver('Cusqueña Trigo','Cerveza premium','S/.12.00','cusquena.jpg')">
+<img src="cusquena.jpg">
+<span>Cusqueña Trigo</span>
+<b>S/.12.00</b>
+</div>
+
+<div class="item" onclick="ver('Corona','Cerveza importada','S/.8.00','corona.jpg')">
+<img src="corona.jpg">
+<span>Corona</span>
+<b>S/.8.00</b>
 </div>
 
 </div>
