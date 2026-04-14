@@ -2,50 +2,196 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Club Campestre</title>
+<title>Magma's Club Campestre</title>
+
 <style>
 body {
   margin: 0;
   font-family: Arial;
   color: white;
-  text-align: center;
 }
 
-.menu {
-  padding: 20px;
-  background-size: cover;
+/* HOME */
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* SECCIONES */
+.seccion {
+  display: none;
   min-height: 100vh;
+  background-size: cover;
+  padding: 20px;
 }
 
 .item {
-  background: rgba(0,0,0,0.6);
-  margin: 10px;
-  padding: 10px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0,0,0,0.6);
+  margin: 10px 0;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="menu" style="background-image:url('https://i.imgur.com/8Km9tLL.jpg')">
-  <h1>🍽 Comidas</h1>
+<!-- INICIO -->
+<div class="home" id="inicio">
+  <img src="logo.png" class="logo">
+  <h1>Magma's Club Campestre</h1>
 
-  <div class="item"><span>Cuy Entero Frito</span><b>S/.60</b></div>
-  <div class="item"><span>1/2 Cuy Frito</span><b>S/.30</b></div>
-  <div class="item"><span>Trucha Frita</span><b>S/.20</b></div>
-  <div class="item"><span>Chicharrón</span><b>S/.20</b></div>
+  <button onclick="mostrar('comidas')">🍽 Comidas</button>
+  <button onclick="mostrar('bebidas')">🥤 Bebidas</button>
 </div>
 
-<div class="menu" style="background-image:url('https://i.imgur.com/Z8sQbYk.jpg')">
-  <h1>🥤 Bebidas</h1>
+<!-- COMIDAS -->
+<div class="seccion" id="comidas" style="background-image:url('fondo-comidas.jpg')">
 
-  <div class="item"><span>Inca Kola</span><b>S/.3.50</b></div>
-  <div class="item"><span>Coca Cola</span><b>S/.3.50</b></div>
-  <div class="item"><span>Pilsen</span><b>S/.10.00</b></div>
-  <div class="item"><span>Chicha Morada</span><b>S/.10.00</b></div>
+<button onclick="volver()">⬅ Volver</button>
+<img src="logo.png" class="logo">
+<h1>Comidas</h1>
+
+<div class="item" onclick="ver('Cuy Entero Frito','Plato crocante tradicional','S/.60','cuy-entero.jpg')">
+<img src="cuy-entero.jpg"> Cuy Entero Frito <b>S/.60</b>
 </div>
+
+<div class="item" onclick="ver('1/2 Cuy Frito','Mitad crocante','S/.30','medio-cuy.jpg')">
+<img src="medio-cuy.jpg"> 1/2 Cuy Frito <b>S/.30</b>
+</div>
+
+<div class="item" onclick="ver('Trucha Frita','Trucha fresca','S/.20','trucha.jpg')">
+<img src="trucha.jpg"> Trucha Frita <b>S/.20</b>
+</div>
+
+<div class="item" onclick="ver('Chicharrón de Chancho','Carne crocante','S/.20','chicharron.jpg')">
+<img src="chicharron.jpg"> Chicharrón <b>S/.20</b>
+</div>
+
+<div class="item" onclick="ver('Parrilla Mixta','Variedad de carnes','S/.30','parrilla.jpg')">
+<img src="parrilla.jpg"> Parrilla Mixta <b>S/.30</b>
+</div>
+
+<div class="item" onclick="ver('Pollo a la Parrilla','Pollo jugoso','S/.20','pollo.jpg')">
+<img src="pollo.jpg"> Pollo a la Parrilla <b>S/.20</b>
+</div>
+
+<div class="item" onclick="ver('Chuleta a la Parrilla','Chuleta dorada','S/.20','chuleta.jpg')">
+<img src="chuleta.jpg"> Chuleta <b>S/.20</b>
+</div>
+
+</div>
+
+<!-- BEBIDAS -->
+<div class="seccion" id="bebidas" style="background-image:url('fondo-bebidas.jpg')">
+
+<button onclick="volver()">⬅ Volver</button>
+<img src="logo.png" class="logo">
+<h1>Bebidas</h1>
+
+<div class="item" onclick="ver('Inca Kola','Bebida peruana clásica','S/.3.50','inca.jpg')">
+<img src="inca.jpg"> Inca Kola <b>S/.3.50</b>
+</div>
+
+<div class="item" onclick="ver('Coca Cola','Bebida refrescante','S/.3.50','coca.jpg')">
+<img src="coca.jpg"> Coca Cola <b>S/.3.50</b>
+</div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="cerrar()">
+  <div class="modal-content">
+    <img id="img">
+    <h2 id="titulo"></h2>
+    <p id="desc"></p>
+    <h3 id="precio"></h3>
+  </div>
+</div>
+
+<script>
+function mostrar(sec) {
+  document.getElementById("inicio").style.display = "none";
+  document.getElementById(sec).style.display = "block";
+}
+
+function volver() {
+  document.getElementById("inicio").style.display = "flex";
+  document.getElementById("comidas").style.display = "none";
+  document.getElementById("bebidas").style.display = "none";
+}
+
+function ver(nombre, desc, precio, imagen) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("titulo").innerText = nombre;
+  document.getElementById("desc").innerText = desc;
+  document.getElementById("precio").innerText = precio;
+  document.getElementById("img").src = imagen;
+}
+
+function cerrar() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
