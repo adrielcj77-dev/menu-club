@@ -25,26 +25,23 @@ body {
 
 .logo {
   width: 80px;
-  margin-bottom: 5px;
 }
 
 h1 {
   font-size: 22px;
-  margin: 5px 0;
 }
 
-/* BOTONES GRANDES */
+/* BOTONES */
 button {
   width: 90%;
   max-width: 300px;
   padding: 18px;
   margin: 8px;
   font-size: 20px;
-  border: none;
   border-radius: 12px;
+  border: none;
   background: #facc15;
   color: black;
-  font-weight: bold;
 }
 
 /* SECCIONES */
@@ -65,33 +62,21 @@ button {
   margin: 8px 0;
   padding: 10px;
   border-radius: 10px;
-  font-size: 16px;
 }
 
 .item img {
   width: 65px;
   height: 65px;
   border-radius: 10px;
-  object-fit: cover;
 }
 
 .item span {
   flex: 1;
 }
 
-/* BOTÓN VOLVER */
-.back {
-  padding: 10px;
-  margin-bottom: 10px;
-  width: auto;
-  font-size: 14px;
-}
-
 /* MODAL */
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.9);
@@ -129,49 +114,35 @@ button {
 <!-- COMIDAS -->
 <div class="seccion" id="comidas" style="background-image:url('fondo-comidas.jpg')">
 
-<button class="back" onclick="volver()">⬅ Volver</button>
+<button onclick="volver()">⬅ Volver</button>
 <img src="logo.png" class="logo">
 
 <div class="item" onclick="ver('Cuy Entero','Crocante','S/.60','cuy-entero.jpg')">
-<img src="cuy-entero.jpg">
-<span>Cuy Entero</span>
-<b>S/.60</b>
+<img src="cuy-entero.jpg"><span>Cuy Entero</span><b>S/.60</b>
 </div>
 
 <div class="item" onclick="ver('Medio Cuy','Crocante','S/.30','medio-cuy.jpg')">
-<img src="medio-cuy.jpg">
-<span>1/2 Cuy</span>
-<b>S/.30</b>
+<img src="medio-cuy.jpg"><span>1/2 Cuy</span><b>S/.30</b>
 </div>
 
 <div class="item" onclick="ver('Trucha','Fresca','S/.20','trucha.jpg')">
-<img src="trucha.jpg">
-<span>Trucha</span>
-<b>S/.20</b>
+<img src="trucha.jpg"><span>Trucha</span><b>S/.20</b>
 </div>
 
 <div class="item" onclick="ver('Chicharrón','Crujiente','S/.20','chicharron.jpg')">
-<img src="chicharron.jpg">
-<span>Chicharrón</span>
-<b>S/.20</b>
+<img src="chicharron.jpg"><span>Chicharrón</span><b>S/.20</b>
 </div>
 
-<div class="item" onclick="ver('Parrilla Mixta','Variedad de carnes','S/.30','parrilla.jpg')">
-<img src="parrilla.jpg">
-<span>Parrilla Mixta</span>
-<b>S/.30</b>
+<div class="item" onclick="ver('Parrilla Mixta','Variado','S/.30','parrilla.jpg')">
+<img src="parrilla.jpg"><span>Parrilla Mixta</span><b>S/.30</b>
 </div>
 
-<div class="item" onclick="ver('Pollo a la Parrilla','Jugoso','S/.20','pollo.jpg')">
-<img src="pollo.jpg">
-<span>Pollo</span>
-<b>S/.20</b>
+<div class="item" onclick="ver('Pollo','Parrilla','S/.20','pollo.jpg')">
+<img src="pollo.jpg"><span>Pollo</span><b>S/.20</b>
 </div>
 
-<div class="item" onclick="ver('Chuleta a la Parrilla','Doradita','S/.20','chuleta.jpg')">
-<img src="chuleta.jpg">
-<span>Chuleta</span>
-<b>S/.20</b>
+<div class="item" onclick="ver('Chuleta','Parrilla','S/.20','chuleta.jpg')">
+<img src="chuleta.jpg"><span>Chuleta</span><b>S/.20</b>
 </div>
 
 </div>
@@ -179,54 +150,48 @@ button {
 <!-- BEBIDAS -->
 <div class="seccion" id="bebidas" style="background-image:url('fondo-bebidas.jpg')">
 
-<button class="back" onclick="volver()">⬅ Volver</button>
+<button onclick="volver()">⬅ Volver</button>
 <img src="logo.png" class="logo">
 
 <h1>Bebidas</h1>
 
-<!-- INCA KOLA -->
-<div class="item" onclick="ver('Inca Kola Personal','Botella personal','S/.3.50','inca.jpg')">
-<img src="inca.jpg">
-<span>Inca Kola Personal</span>
-<b>S/.3.50</b>
+<!-- GASEOSAS -->
+<div class="item" onclick="ver('Gaseosa Personal','Botella pequeña','S/.3.50','inca.jpg')">
+<img src="inca.jpg"><span>Gaseosa Personal</span><b>S/.3.50</b>
 </div>
 
-<div class="item" onclick="ver('Inca Kola 1 Litro','Botella mediana','S/.7.00','inca.jpg')">
-<img src="inca.jpg">
-<span>Inca Kola 1L</span>
-<b>S/.7.00</b>
+<div class="item" onclick="ver('Gaseosa 1L','Botella mediana','S/.7.00','inca.jpg')">
+<img src="inca.jpg"><span>Gaseosa 1L</span><b>S/.7.00</b>
 </div>
 
-<div class="item" onclick="ver('Inca Kola 1.5 Litros','Botella grande','S/.10.00','inca.jpg')">
-<img src="inca.jpg">
-<span>Inca Kola 1.5L</span>
-<b>S/.10.00</b>
+<div class="item" onclick="ver('Gaseosa 1.5L','Botella grande','S/.10.00','inca.jpg')">
+<img src="inca.jpg"><span>Gaseosa 1.5L</span><b>S/.10.00</b>
 </div>
 
-<!-- COCA COLA -->
-<div class="item" onclick="ver('Coca Cola Personal','Botella personal','S/.3.50','coca.jpg')">
-<img src="coca.jpg">
-<span>Coca Cola Personal</span>
-<b>S/.3.50</b>
+<div class="item" onclick="ver('Gaseosa 2.25L','Botella familiar','S/.13.00','inca.jpg')">
+<img src="inca.jpg"><span>Gaseosa 2.25L</span><b>S/.13.00</b>
+</div>
+
+<div class="item" onclick="ver('Gaseosa 3L','Botella grande familiar','S/.15.00','inca.jpg')">
+<img src="inca.jpg"><span>Gaseosa 3L</span><b>S/.15.00</b>
 </div>
 
 <!-- CERVEZAS -->
 <div class="item" onclick="ver('Pilsen 750ml','Cerveza clásica','S/.10.00','pilsen.jpg')">
-<img src="pilsen.jpg">
-<span>Pilsen 750ml</span>
-<b>S/.10.00</b>
+<img src="pilsen.jpg"><span>Pilsen 750ml</span><b>S/.10.00</b>
 </div>
 
 <div class="item" onclick="ver('Cusqueña Trigo','Cerveza premium','S/.12.00','cusquena.jpg')">
-<img src="cusquena.jpg">
-<span>Cusqueña Trigo</span>
-<b>S/.12.00</b>
+<img src="cusquena.jpg"><span>Cusqueña Trigo</span><b>S/.12.00</b>
 </div>
 
-<div class="item" onclick="ver('Corona','Cerveza importada','S/.8.00','corona.jpg')">
-<img src="corona.jpg">
-<span>Corona</span>
-<b>S/.8.00</b>
+<div class="item" onclick="ver('Corona pequeña','Cerveza importada','S/.8.00','corona.jpg')">
+<img src="corona.jpg"><span>Corona</span><b>S/.8.00</b>
+</div>
+
+<!-- CHICHA -->
+<div class="item" onclick="ver('Chicha Morada','Refresco natural','S/.10.00','chicha.jpg')">
+<img src="chicha.jpg"><span>Chicha Morada</span><b>S/.10.00</b>
 </div>
 
 </div>
@@ -242,27 +207,27 @@ button {
 </div>
 
 <script>
-function mostrar(sec) {
-  document.getElementById("inicio").style.display = "none";
-  document.getElementById(sec).style.display = "block";
+function mostrar(sec){
+  document.getElementById("inicio").style.display="none";
+  document.getElementById(sec).style.display="block";
 }
 
-function volver() {
-  document.getElementById("inicio").style.display = "flex";
-  document.getElementById("comidas").style.display = "none";
-  document.getElementById("bebidas").style.display = "none";
+function volver(){
+  document.getElementById("inicio").style.display="flex";
+  document.getElementById("comidas").style.display="none";
+  document.getElementById("bebidas").style.display="none";
 }
 
-function ver(nombre, desc, precio, imagen) {
-  document.getElementById("modal").style.display = "flex";
-  document.getElementById("titulo").innerText = nombre;
-  document.getElementById("desc").innerText = desc;
-  document.getElementById("precio").innerText = precio;
-  document.getElementById("img").src = imagen;
+function ver(n,d,p,i){
+  document.getElementById("modal").style.display="flex";
+  document.getElementById("titulo").innerText=n;
+  document.getElementById("desc").innerText=d;
+  document.getElementById("precio").innerText=p;
+  document.getElementById("img").src=i;
 }
 
-function cerrar() {
-  document.getElementById("modal").style.display = "none";
+function cerrar(){
+  document.getElementById("modal").style.display="none";
 }
 </script>
 
