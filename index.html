@@ -57,6 +57,7 @@ button {
   margin: 8px 0;
   padding: 10px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .item img {
@@ -65,21 +66,11 @@ button {
   border-radius: 10px;
 }
 
-.item span {
-  flex: 1;
-}
-
-/* BLOQUE TEXTO */
-.lista-precios {
-  background: rgba(0,0,0,0.7);
-  padding: 10px;
-  border-radius: 10px;
-  margin: 10px 0;
-}
-
-/* MODAL */
+/* MODAL ANIMADO */
 .modal {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.9);
@@ -91,9 +82,21 @@ button {
 .modal-content {
   background: #222;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 15px;
   width: 90%;
-  max-width: 300px;
+  max-width: 350px;
+  text-align: center;
+  animation: zoom 0.3s ease;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.5);}
+  to {transform: scale(1);}
 }
 </style>
 </head>
@@ -114,79 +117,72 @@ button {
 
 <button onclick="volver()">⬅ Volver</button>
 
-<div class="item">
-<img src="cuy-entero.jpg"><span>Cuy Entero</span><b>S/.60</b>
+<div class="item" onclick="ver(
+'Cuy entero frito',
+'Cuy dorado acompañado con papas sancochadas, choclo y una deliciosa ensalada mixta bañada con exquisita vinagreta de casa.',
+'S/.60',
+'cuy-entero.jpg')">
+<img src="cuy-entero.jpg"><span>Cuy Entero</span>
 </div>
 
-<div class="item">
-<img src="medio-cuy.jpg"><span>1/2 Cuy</span><b>S/.30</b>
+<div class="item" onclick="ver(
+'Medio cuy frito',
+'1/2 cuy dorado acompañado con papas sancochadas, choclo y una deliciosa ensalada mixta bañada con exquisita vinagreta de casa.',
+'S/.30',
+'medio-cuy.jpg')">
+<img src="medio-cuy.jpg"><span>1/2 Cuy</span>
 </div>
 
-<div class="item">
-<img src="trucha.jpg"><span>Trucha</span><b>S/.20</b>
+<div class="item" onclick="ver(
+'Trucha frita',
+'Trucha frita acompañada con papas sancochadas, choclo y una deliciosa ensalada mixta bañada con exquisita vinagreta de casa',
+'S/.20',
+'trucha.jpg')">
+<img src="trucha.jpg"><span>Trucha</span>
 </div>
 
-<div class="item">
-<img src="chicharron.jpg"><span>Chicharrón</span><b>S/.20</b>
+<div class="item" onclick="ver(
+'Chicharron de chancho',
+'Trozos de carne de chancho dorados acompañados con papas sancochadas, chuño, choclo y una deliciosa ensalada mixta de cebolla roja, tomate, hierba buena.',
+'S/.20',
+'chicharron.jpg')">
+<img src="chicharron.jpg"><span>Chicharrón</span>
 </div>
 
-<div class="item">
-<img src="parrilla.jpg"><span>Parrilla Mixta</span><b>S/.30</b>
+<div class="item" onclick="ver(
+'Parrilla Mixta',
+'Pollo a la plancha con papa sancochada, anticucho, choclo, chorizo, ensalada mixta cubierta de su deliciosa vinagreta y chuleta de chancho',
+'S/.30',
+'parrilla.jpg')">
+<img src="parrilla.jpg"><span>Parrilla Mixta</span>
 </div>
 
-<div class="item">
-<img src="pollo.jpg"><span>Pollo</span><b>S/.20</b>
+<div class="item" onclick="ver(
+'Pollo a la plancha',
+'Una pechuga de pollo acompañada de papa sancochada, ensalada mixta, cubierta de una deliciosa vinagreta junto a chorizo.',
+'S/.20',
+'pollo.jpg')">
+<img src="pollo.jpg"><span>Pollo a la plancha</span>
 </div>
 
-<div class="item">
-<img src="chuleta.jpg"><span>Chuleta</span><b>S/.20</b>
+<div class="item" onclick="ver(
+'Chuleta a la plancha',
+'Chuleta de chancho acompañada de papa sancochada, ensalada mixta, cubierta de una deliciosa vinagreta junto a chorizo',
+'S/.20',
+'chuleta.jpg')">
+<img src="chuleta.jpg"><span>Chuleta a la plancha</span>
 </div>
 
 </div>
 
-<!-- BEBIDAS -->
-<div class="seccion" id="bebidas" style="background-image:url('fondo-bebidas.jpg')">
-
-<button onclick="volver()">⬅ Volver</button>
-
-<h2>Gaseosas INKA KOLA y COCA COLA</h2>
-
-<div class="lista-precios">
-<p>- G. Personal S/.3.50</p>
-<p>- G. 1 litro S/.7.00</p>
-<p>- G. 1.5 litros S/.10.00</p>
-<p>- G. 2.25 litros S/.13.00</p>
-<p>- G. 3 litros S/.15.00</p>
-</div>
-
-<h2>Cervezas</h2>
-
-<div class="item">
-<img src="pilsen.jpg"><span>Pilsen 750ml</span><b>S/.10.00</b>
-</div>
-
-<div class="item">
-<img src="cusquena.jpg"><span>Cusqueña Trigo</span><b>S/.12.00</b>
-</div>
-
-<div class="item">
-<img src="corona.jpg"><span>Corona</span><b>S/.8.00</b>
-</div>
-
-<h2>Refrescos</h2>
-
-<div class="item">
-<img src="chicha.jpg"><span>Chicha Morada</span><b>S/.10.00</b>
-</div>
-
-<div class="item">
-<img src="7semillas.jpg"><span>Chicha 7 Semillas</span><b>S/.10.00</b>
-</div>
-
-<div class="item">
-<img src="limonada.jpg"><span>Limonada Frozen</span><b>S/.10.00</b>
-</div>
-
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="cerrar()">
+  <div class="modal-content">
+    <img id="img">
+    <h3 id="titulo"></h3>
+    <p id="desc"></p>
+    <b id="precio"></b>
+  </div>
 </div>
 
 <script>
@@ -201,6 +197,18 @@ function volver(){
   document.getElementById("inicio").style.display="flex";
   document.getElementById("comidas").style.display="none";
   document.getElementById("bebidas").style.display="none";
+}
+
+function ver(n,d,p,i){
+  document.getElementById("modal").style.display="flex";
+  document.getElementById("titulo").innerText=n;
+  document.getElementById("desc").innerText=d;
+  document.getElementById("precio").innerText=p;
+  document.getElementById("img").src=i;
+}
+
+function cerrar(){
+  document.getElementById("modal").style.display="none";
 }
 </script>
 
