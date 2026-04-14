@@ -2,6 +2,10 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+
+<!-- 🔥 IMPORTANTE PARA CELULAR -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Magma's Club Campestre</title>
 
 <style>
@@ -19,18 +23,23 @@ body {
   justify-content: center;
   align-items: center;
   background: #111;
+  text-align: center;
+  padding: 20px;
 }
 
 .logo {
-  width: 120px;
+  width: 100px;
   margin-bottom: 10px;
 }
 
 button {
-  padding: 15px 25px;
+  padding: 15px;
   margin: 10px;
   font-size: 18px;
-  cursor: pointer;
+  width: 80%;
+  max-width: 250px;
+  border: none;
+  border-radius: 10px;
 }
 
 /* SECCIONES */
@@ -38,9 +47,15 @@ button {
   display: none;
   min-height: 100vh;
   background-size: cover;
-  padding: 20px;
+  background-position: center;
+  padding: 15px;
 }
 
+h1 {
+  text-align: center;
+}
+
+/* ITEMS */
 .item {
   display: flex;
   align-items: center;
@@ -49,18 +64,19 @@ button {
   margin: 10px 0;
   padding: 10px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.item:hover {
-  transform: scale(1.05);
+  border-radius: 10px;
 }
 
 .item img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   object-fit: cover;
   border-radius: 10px;
+}
+
+/* TEXTO FLEX */
+.item span {
+  flex: 1;
 }
 
 /* MODAL */
@@ -70,18 +86,20 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.85);
   display: none;
   justify-content: center;
   align-items: center;
+  padding: 15px;
 }
 
 .modal-content {
   background: #222;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   text-align: center;
-  max-width: 300px;
+  width: 100%;
+  max-width: 320px;
 }
 
 .modal-content img {
@@ -100,8 +118,8 @@ button {
   <img src="logo.png" class="logo">
   <h1>Magma's Club Campestre</h1>
 
-  <button onclick="mostrar('comidas')">🍽 Comidas</button>
-  <button onclick="mostrar('bebidas')">🥤 Bebidas</button>
+  <button onclick="mostrar('comidas')">🍽 Ver Comidas</button>
+  <button onclick="mostrar('bebidas')">🥤 Ver Bebidas</button>
 </div>
 
 <!-- COMIDAS -->
@@ -109,34 +127,49 @@ button {
 
 <button onclick="volver()">⬅ Volver</button>
 <img src="logo.png" class="logo">
+
 <h1>Comidas</h1>
 
 <div class="item" onclick="ver('Cuy Entero Frito','Plato crocante tradicional','S/.60','cuy-entero.jpg')">
-<img src="cuy-entero.jpg"> Cuy Entero Frito <b>S/.60</b>
+<img src="cuy-entero.jpg">
+<span>Cuy Entero Frito</span>
+<b>S/.60</b>
 </div>
 
 <div class="item" onclick="ver('1/2 Cuy Frito','Mitad crocante','S/.30','medio-cuy.jpg')">
-<img src="medio-cuy.jpg"> 1/2 Cuy Frito <b>S/.30</b>
+<img src="medio-cuy.jpg">
+<span>1/2 Cuy Frito</span>
+<b>S/.30</b>
 </div>
 
 <div class="item" onclick="ver('Trucha Frita','Trucha fresca','S/.20','trucha.jpg')">
-<img src="trucha.jpg"> Trucha Frita <b>S/.20</b>
+<img src="trucha.jpg">
+<span>Trucha Frita</span>
+<b>S/.20</b>
 </div>
 
 <div class="item" onclick="ver('Chicharrón de Chancho','Carne crocante','S/.20','chicharron.jpg')">
-<img src="chicharron.jpg"> Chicharrón <b>S/.20</b>
+<img src="chicharron.jpg">
+<span>Chicharrón</span>
+<b>S/.20</b>
 </div>
 
 <div class="item" onclick="ver('Parrilla Mixta','Variedad de carnes','S/.30','parrilla.jpg')">
-<img src="parrilla.jpg"> Parrilla Mixta <b>S/.30</b>
+<img src="parrilla.jpg">
+<span>Parrilla Mixta</span>
+<b>S/.30</b>
 </div>
 
 <div class="item" onclick="ver('Pollo a la Parrilla','Pollo jugoso','S/.20','pollo.jpg')">
-<img src="pollo.jpg"> Pollo a la Parrilla <b>S/.20</b>
+<img src="pollo.jpg">
+<span>Pollo a la Parrilla</span>
+<b>S/.20</b>
 </div>
 
 <div class="item" onclick="ver('Chuleta a la Parrilla','Chuleta dorada','S/.20','chuleta.jpg')">
-<img src="chuleta.jpg"> Chuleta <b>S/.20</b>
+<img src="chuleta.jpg">
+<span>Chuleta a la Parrilla</span>
+<b>S/.20</b>
 </div>
 
 </div>
@@ -146,14 +179,19 @@ button {
 
 <button onclick="volver()">⬅ Volver</button>
 <img src="logo.png" class="logo">
+
 <h1>Bebidas</h1>
 
 <div class="item" onclick="ver('Inca Kola','Bebida peruana clásica','S/.3.50','inca.jpg')">
-<img src="inca.jpg"> Inca Kola <b>S/.3.50</b>
+<img src="inca.jpg">
+<span>Inca Kola</span>
+<b>S/.3.50</b>
 </div>
 
 <div class="item" onclick="ver('Coca Cola','Bebida refrescante','S/.3.50','coca.jpg')">
-<img src="coca.jpg"> Coca Cola <b>S/.3.50</b>
+<img src="coca.jpg">
+<span>Coca Cola</span>
+<b>S/.3.50</b>
 </div>
 
 </div>
