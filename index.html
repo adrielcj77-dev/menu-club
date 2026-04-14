@@ -1,110 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Magma's Club Campestre</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial;
-  color: white;
-}
-
-.home {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #111;
-  padding: 10px;
-}
-
-.logo {
-  width: 80px;
-}
-
-h1 {
-  font-size: 22px;
-}
-
-button {
-  width: 90%;
-  max-width: 300px;
-  padding: 18px;
-  margin: 8px;
-  font-size: 20px;
-  border-radius: 12px;
-  border: none;
-  background: #facc15;
-  color: black;
-}
-
-.seccion {
-  display: none;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  padding: 10px;
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(0,0,0,0.7);
-  margin: 8px 0;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.item img {
-  width: 65px;
-  height: 65px;
-  border-radius: 10px;
-}
-
-.item span {
-  flex: 1;
-}
-
-.modal {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: #222;
-  padding: 15px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 300px;
-}
-
-.modal-content img {
-  width: 100%;
-  border-radius: 10px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="home" id="inicio">
-  <img src="logo.png" class="logo">
-  <h1>Magma's Club</h1>
-
-  <button onclick="mostrar('comidas')">🍽 COMIDAS</button>
-  <button onclick="mostrar('bebidas')">🥤 BEBIDAS</button>
-</div>
-
 <!-- BEBIDAS -->
 <div class="seccion" id="bebidas" style="background-image:url('fondo-bebidas.jpg')">
 
@@ -121,12 +14,16 @@ button {
 <img src="inca.jpg"><span>1 Litro</span><b>S/.7.00</b>
 </div>
 
-<div class="item" onclick="ver('Inca Kola 1.25L','Botella mediana','S/.8.00','inca.jpg')">
-<img src="inca.jpg"><span>1.25 Litros</span><b>S/.8.00</b>
+<div class="item" onclick="ver('Inca Kola 1.25L','Botella mediana','S/.7.00','inca.jpg')">
+<img src="inca.jpg"><span>1.25 Litros</span><b>S/.7.00</b>
 </div>
 
 <div class="item" onclick="ver('Inca Kola 1.5L','Botella grande','S/.10.00','inca.jpg')">
 <img src="inca.jpg"><span>1.5 Litros</span><b>S/.10.00</b>
+</div>
+
+<div class="item" onclick="ver('Inca Kola 2.25L','Botella familiar','S/.13.00','inca.jpg')">
+<img src="inca.jpg"><span>2.25 Litros</span><b>S/.13.00</b>
 </div>
 
 <div class="item" onclick="ver('Inca Kola 3L','Botella familiar grande','S/.15.00','inca.jpg')">
@@ -143,8 +40,16 @@ button {
 <img src="coca.jpg"><span>1 Litro</span><b>S/.7.00</b>
 </div>
 
-<div class="item" onclick="ver('Coca Cola 1.25L','Botella mediana','S/.8.00','coca.jpg')">
-<img src="coca.jpg"><span>1.25 Litros</span><b>S/.8.00</b>
+<div class="item" onclick="ver('Coca Cola 1.25L','Botella mediana','S/.7.00','coca.jpg')">
+<img src="coca.jpg"><span>1.25 Litros</span><b>S/.7.00</b>
+</div>
+
+<div class="item" onclick="ver('Coca Cola 1.5L','Botella grande','S/.10.00','coca.jpg')">
+<img src="coca.jpg"><span>1.5 Litros</span><b>S/.10.00</b>
+</div>
+
+<div class="item" onclick="ver('Coca Cola 2.25L','Botella familiar','S/.13.00','coca.jpg')">
+<img src="coca.jpg"><span>2.25 Litros</span><b>S/.13.00</b>
 </div>
 
 <div class="item" onclick="ver('Coca Cola 3L','Botella familiar grande','S/.15.00','coca.jpg')">
@@ -172,41 +77,3 @@ button {
 </div>
 
 </div>
-
-<!-- MODAL -->
-<div class="modal" id="modal" onclick="cerrar()">
-  <div class="modal-content">
-    <img id="img">
-    <h3 id="titulo"></h3>
-    <p id="desc"></p>
-    <b id="precio"></b>
-  </div>
-</div>
-
-<script>
-function mostrar(sec){
-  document.getElementById("inicio").style.display="none";
-  document.getElementById(sec).style.display="block";
-}
-
-function volver(){
-  document.getElementById("inicio").style.display="flex";
-  document.getElementById("comidas").style.display="none";
-  document.getElementById("bebidas").style.display="none";
-}
-
-function ver(n,d,p,i){
-  document.getElementById("modal").style.display="flex";
-  document.getElementById("titulo").innerText=n;
-  document.getElementById("desc").innerText=d;
-  document.getElementById("precio").innerText=p;
-  document.getElementById("img").src=i;
-}
-
-function cerrar(){
-  document.getElementById("modal").style.display="none";
-}
-</script>
-
-</body>
-</html>
