@@ -12,7 +12,6 @@ body {
   color: white;
 }
 
-/* HOME */
 .home {
   height: 100vh;
   display: flex;
@@ -26,7 +25,6 @@ body {
   width: 80px;
 }
 
-/* BOTONES */
 button {
   width: 90%;
   max-width: 300px;
@@ -39,7 +37,6 @@ button {
   color: black;
 }
 
-/* SECCIONES */
 .seccion {
   display: none;
   min-height: 100vh;
@@ -48,7 +45,6 @@ button {
   background-position: center;
 }
 
-/* ITEMS */
 .item {
   display: flex;
   align-items: center;
@@ -66,7 +62,6 @@ button {
   border-radius: 10px;
 }
 
-/* MODAL ANIMADO */
 .modal {
   position: fixed;
   top: 0;
@@ -98,6 +93,12 @@ button {
   from {transform: scale(0.5);}
   to {transform: scale(1);}
 }
+
+.lista-precios {
+  background: rgba(0,0,0,0.7);
+  padding: 10px;
+  border-radius: 10px;
+}
 </style>
 </head>
 
@@ -117,61 +118,62 @@ button {
 
 <button onclick="volver()">⬅ Volver</button>
 
-<div class="item" onclick="ver(
-'Cuy entero frito',
-'Cuy dorado acompañado con papas sancochadas, choclo y una deliciosa ensalada mixta bañada con exquisita vinagreta de casa.',
-'S/.60',
-'cuy-entero.jpg')">
+<div class="item" onclick="ver('Cuy entero frito','Cuy dorado acompañado con papas sancochadas, choclo y ensalada con vinagreta.','S/.60','cuy-entero.jpg')">
 <img src="cuy-entero.jpg"><span>Cuy Entero</span>
 </div>
 
-<div class="item" onclick="ver(
-'Medio cuy frito',
-'1/2 cuy dorado acompañado con papas sancochadas, choclo y una deliciosa ensalada mixta bañada con exquisita vinagreta de casa.',
-'S/.30',
-'medio-cuy.jpg')">
+<div class="item" onclick="ver('Medio cuy frito','1/2 cuy dorado con papas, choclo y ensalada con vinagreta.','S/.30','medio-cuy.jpg')">
 <img src="medio-cuy.jpg"><span>1/2 Cuy</span>
 </div>
 
-<div class="item" onclick="ver(
-'Trucha frita',
-'Trucha frita acompañada con papas sancochadas, choclo y una deliciosa ensalada mixta bañada con exquisita vinagreta de casa',
-'S/.20',
-'trucha.jpg')">
+<div class="item" onclick="ver('Trucha frita','Trucha frita con papas, choclo y ensalada.','S/.20','trucha.jpg')">
 <img src="trucha.jpg"><span>Trucha</span>
 </div>
 
-<div class="item" onclick="ver(
-'Chicharron de chancho',
-'Trozos de carne de chancho dorados acompañados con papas sancochadas, chuño, choclo y una deliciosa ensalada mixta de cebolla roja, tomate, hierba buena.',
-'S/.20',
-'chicharron.jpg')">
+<div class="item" onclick="ver('Chicharron de chancho','Carne de chancho dorada con papas, chuño, choclo y ensalada.','S/.20','chicharron.jpg')">
 <img src="chicharron.jpg"><span>Chicharrón</span>
 </div>
 
-<div class="item" onclick="ver(
-'Parrilla Mixta',
-'Pollo a la plancha con papa sancochada, anticucho, choclo, chorizo, ensalada mixta cubierta de su deliciosa vinagreta y chuleta de chancho',
-'S/.30',
-'parrilla.jpg')">
+<div class="item" onclick="ver('Parrilla Mixta','Pollo, anticucho, chorizo, chuleta con ensalada.','S/.30','parrilla.jpg')">
 <img src="parrilla.jpg"><span>Parrilla Mixta</span>
 </div>
 
-<div class="item" onclick="ver(
-'Pollo a la plancha',
-'Una pechuga de pollo acompañada de papa sancochada, ensalada mixta, cubierta de una deliciosa vinagreta junto a chorizo.',
-'S/.20',
-'pollo.jpg')">
+<div class="item" onclick="ver('Pollo a la plancha','Pechuga de pollo con papas y ensalada.','S/.20','pollo.jpg')">
 <img src="pollo.jpg"><span>Pollo a la plancha</span>
 </div>
 
-<div class="item" onclick="ver(
-'Chuleta a la plancha',
-'Chuleta de chancho acompañada de papa sancochada, ensalada mixta, cubierta de una deliciosa vinagreta junto a chorizo',
-'S/.20',
-'chuleta.jpg')">
+<div class="item" onclick="ver('Chuleta a la plancha','Chuleta con papas y ensalada.','S/.20','chuleta.jpg')">
 <img src="chuleta.jpg"><span>Chuleta a la plancha</span>
 </div>
+
+</div>
+
+<!-- BEBIDAS -->
+<div class="seccion" id="bebidas" style="background-image:url('fondo-bebidas.jpg')">
+
+<button onclick="volver()">⬅ Volver</button>
+
+<h2>Gaseosas INKA KOLA y COCA COLA</h2>
+
+<div class="lista-precios">
+<p>- G. Personal S/.3.50</p>
+<p>- G. 1 litro S/.7.00</p>
+<p>- G. 1.5 litros S/.10.00</p>
+<p>- G. 2.25 litros S/.13.00</p>
+<p>- G. 3 litros S/.15.00</p>
+</div>
+
+<h2>Cervezas</h2>
+
+<div class="item"><img src="pilsen.jpg"><span>Pilsen</span><b>S/.10</b></div>
+<div class="item"><img src="cusquena.jpg"><span>Cusqueña</span><b>S/.12</b></div>
+<div class="item"><img src="corona.jpg"><span>Corona</span><b>S/.8</b></div>
+
+<h2>Refrescos</h2>
+
+<div class="item"><img src="chicha.jpg"><span>Chicha Morada</span><b>S/.10</b></div>
+<div class="item"><img src="7semillas.jpg"><span>Chicha 7 Semillas</span><b>S/.10</b></div>
+<div class="item"><img src="limonada.jpg"><span>Limonada Frozen</span><b>S/.10</b></div>
 
 </div>
 
