@@ -2,10 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-
-<!-- 🔥 IMPORTANTE PARA CELULAR -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Magma's Club Campestre</title>
 
 <style>
@@ -23,23 +20,31 @@ body {
   justify-content: center;
   align-items: center;
   background: #111;
-  text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .logo {
-  width: 100px;
-  margin-bottom: 10px;
+  width: 80px;
+  margin-bottom: 5px;
 }
 
+h1 {
+  font-size: 22px;
+  margin: 5px 0;
+}
+
+/* BOTONES GRANDES */
 button {
-  padding: 15px;
-  margin: 10px;
-  font-size: 18px;
-  width: 80%;
-  max-width: 250px;
+  width: 90%;
+  max-width: 300px;
+  padding: 18px;
+  margin: 8px;
+  font-size: 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
+  background: #facc15;
+  color: black;
+  font-weight: bold;
 }
 
 /* SECCIONES */
@@ -48,35 +53,38 @@ button {
   min-height: 100vh;
   background-size: cover;
   background-position: center;
-  padding: 15px;
+  padding: 10px;
 }
 
-h1 {
-  text-align: center;
-}
-
-/* ITEMS */
+/* ITEMS MÁS COMPACTOS */
 .item {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(0,0,0,0.6);
-  margin: 10px 0;
+  background: rgba(0,0,0,0.7);
+  margin: 8px 0;
   padding: 10px;
-  cursor: pointer;
   border-radius: 10px;
+  font-size: 16px;
 }
 
 .item img {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
+  width: 65px;
+  height: 65px;
   border-radius: 10px;
+  object-fit: cover;
 }
 
-/* TEXTO FLEX */
 .item span {
   flex: 1;
+}
+
+/* BOTÓN VOLVER */
+.back {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: auto;
+  font-size: 14px;
 }
 
 /* MODAL */
@@ -86,29 +94,25 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.9);
   display: none;
   justify-content: center;
   align-items: center;
-  padding: 15px;
 }
 
 .modal-content {
   background: #222;
   padding: 15px;
   border-radius: 10px;
-  text-align: center;
-  width: 100%;
-  max-width: 320px;
+  width: 90%;
+  max-width: 300px;
 }
 
 .modal-content img {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 10px;
 }
 </style>
-
 </head>
 
 <body>
@@ -116,59 +120,57 @@ h1 {
 <!-- INICIO -->
 <div class="home" id="inicio">
   <img src="logo.png" class="logo">
-  <h1>Magma's Club Campestre</h1>
+  <h1>Magma's Club</h1>
 
-  <button onclick="mostrar('comidas')">🍽 Ver Comidas</button>
-  <button onclick="mostrar('bebidas')">🥤 Ver Bebidas</button>
+  <button onclick="mostrar('comidas')">🍽 COMIDAS</button>
+  <button onclick="mostrar('bebidas')">🥤 BEBIDAS</button>
 </div>
 
 <!-- COMIDAS -->
 <div class="seccion" id="comidas" style="background-image:url('fondo-comidas.jpg')">
 
-<button onclick="volver()">⬅ Volver</button>
+<button class="back" onclick="volver()">⬅ Volver</button>
 <img src="logo.png" class="logo">
 
-<h1>Comidas</h1>
-
-<div class="item" onclick="ver('Cuy Entero Frito','Plato crocante tradicional','S/.60','cuy-entero.jpg')">
+<div class="item" onclick="ver('Cuy Entero','Crocante','S/.60','cuy-entero.jpg')">
 <img src="cuy-entero.jpg">
-<span>Cuy Entero Frito</span>
+<span>Cuy Entero</span>
 <b>S/.60</b>
 </div>
 
-<div class="item" onclick="ver('1/2 Cuy Frito','Mitad crocante','S/.30','medio-cuy.jpg')">
+<div class="item" onclick="ver('Medio Cuy','Crocante','S/.30','medio-cuy.jpg')">
 <img src="medio-cuy.jpg">
-<span>1/2 Cuy Frito</span>
+<span>1/2 Cuy</span>
 <b>S/.30</b>
 </div>
 
-<div class="item" onclick="ver('Trucha Frita','Trucha fresca','S/.20','trucha.jpg')">
+<div class="item" onclick="ver('Trucha','Fresca','S/.20','trucha.jpg')">
 <img src="trucha.jpg">
-<span>Trucha Frita</span>
+<span>Trucha</span>
 <b>S/.20</b>
 </div>
 
-<div class="item" onclick="ver('Chicharrón de Chancho','Carne crocante','S/.20','chicharron.jpg')">
+<div class="item" onclick="ver('Chicharrón','Crujiente','S/.20','chicharron.jpg')">
 <img src="chicharron.jpg">
 <span>Chicharrón</span>
 <b>S/.20</b>
 </div>
 
-<div class="item" onclick="ver('Parrilla Mixta','Variedad de carnes','S/.30','parrilla.jpg')">
+<div class="item" onclick="ver('Parrilla','Mixta','S/.30','parrilla.jpg')">
 <img src="parrilla.jpg">
-<span>Parrilla Mixta</span>
+<span>Parrilla</span>
 <b>S/.30</b>
 </div>
 
-<div class="item" onclick="ver('Pollo a la Parrilla','Pollo jugoso','S/.20','pollo.jpg')">
+<div class="item" onclick="ver('Pollo','Parrilla','S/.20','pollo.jpg')">
 <img src="pollo.jpg">
-<span>Pollo a la Parrilla</span>
+<span>Pollo</span>
 <b>S/.20</b>
 </div>
 
-<div class="item" onclick="ver('Chuleta a la Parrilla','Chuleta dorada','S/.20','chuleta.jpg')">
+<div class="item" onclick="ver('Chuleta','Parrilla','S/.20','chuleta.jpg')">
 <img src="chuleta.jpg">
-<span>Chuleta a la Parrilla</span>
+<span>Chuleta</span>
 <b>S/.20</b>
 </div>
 
@@ -177,18 +179,16 @@ h1 {
 <!-- BEBIDAS -->
 <div class="seccion" id="bebidas" style="background-image:url('fondo-bebidas.jpg')">
 
-<button onclick="volver()">⬅ Volver</button>
+<button class="back" onclick="volver()">⬅ Volver</button>
 <img src="logo.png" class="logo">
 
-<h1>Bebidas</h1>
-
-<div class="item" onclick="ver('Inca Kola','Bebida peruana clásica','S/.3.50','inca.jpg')">
+<div class="item" onclick="ver('Inca Kola','Refresco','S/.3.50','inca.jpg')">
 <img src="inca.jpg">
 <span>Inca Kola</span>
 <b>S/.3.50</b>
 </div>
 
-<div class="item" onclick="ver('Coca Cola','Bebida refrescante','S/.3.50','coca.jpg')">
+<div class="item" onclick="ver('Coca Cola','Refresco','S/.3.50','coca.jpg')">
 <img src="coca.jpg">
 <span>Coca Cola</span>
 <b>S/.3.50</b>
@@ -200,9 +200,9 @@ h1 {
 <div class="modal" id="modal" onclick="cerrar()">
   <div class="modal-content">
     <img id="img">
-    <h2 id="titulo"></h2>
+    <h3 id="titulo"></h3>
     <p id="desc"></p>
-    <h3 id="precio"></h3>
+    <b id="precio"></b>
   </div>
 </div>
 
