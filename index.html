@@ -12,6 +12,7 @@ body {
   color: white;
 }
 
+/* HOME */
 .home {
   height: 100vh;
   display: flex;
@@ -19,17 +20,13 @@ body {
   justify-content: center;
   align-items: center;
   background: #111;
-  padding: 10px;
 }
 
 .logo {
   width: 80px;
 }
 
-h1 {
-  font-size: 22px;
-}
-
+/* BOTONES */
 button {
   width: 90%;
   max-width: 300px;
@@ -42,14 +39,16 @@ button {
   color: black;
 }
 
+/* SECCIONES */
 .seccion {
   display: none;
   min-height: 100vh;
+  padding: 10px;
   background-size: cover;
   background-position: center;
-  padding: 10px;
 }
 
+/* ITEMS */
 .item {
   display: flex;
   align-items: center;
@@ -70,6 +69,15 @@ button {
   flex: 1;
 }
 
+/* BLOQUE TEXTO */
+.lista-precios {
+  background: rgba(0,0,0,0.7);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* MODAL */
 .modal {
   position: fixed;
   width: 100%;
@@ -87,16 +95,12 @@ button {
   width: 90%;
   max-width: 300px;
 }
-
-.modal-content img {
-  width: 100%;
-  border-radius: 10px;
-}
 </style>
 </head>
 
 <body>
 
+<!-- INICIO -->
 <div class="home" id="inicio">
   <img src="logo.png" class="logo">
   <h1>Magma's Club</h1>
@@ -105,99 +109,91 @@ button {
   <button onclick="mostrar('bebidas')">🥤 BEBIDAS</button>
 </div>
 
+<!-- COMIDAS -->
+<div class="seccion" id="comidas" style="background-image:url('fondo-comidas.jpg')">
+
+<button onclick="volver()">⬅ Volver</button>
+
+<div class="item">
+<img src="cuy-entero.jpg"><span>Cuy Entero</span><b>S/.60</b>
+</div>
+
+<div class="item">
+<img src="medio-cuy.jpg"><span>1/2 Cuy</span><b>S/.30</b>
+</div>
+
+<div class="item">
+<img src="trucha.jpg"><span>Trucha</span><b>S/.20</b>
+</div>
+
+<div class="item">
+<img src="chicharron.jpg"><span>Chicharrón</span><b>S/.20</b>
+</div>
+
+<div class="item">
+<img src="parrilla.jpg"><span>Parrilla Mixta</span><b>S/.30</b>
+</div>
+
+<div class="item">
+<img src="pollo.jpg"><span>Pollo</span><b>S/.20</b>
+</div>
+
+<div class="item">
+<img src="chuleta.jpg"><span>Chuleta</span><b>S/.20</b>
+</div>
+
+</div>
+
 <!-- BEBIDAS -->
 <div class="seccion" id="bebidas" style="background-image:url('fondo-bebidas.jpg')">
 
 <button onclick="volver()">⬅ Volver</button>
-<img src="logo.png" class="logo">
 
-<h1>Inca Kola</h1>
+<h2>Gaseosas INKA KOLA y COCA COLA</h2>
 
-<div class="item" onclick="ver('Inca Kola Personal','Botella pequeña','S/.3.50','inca.jpg')">
-<img src="inca.jpg"><span>Personal</span><b>S/.3.50</b>
+<div class="lista-precios">
+<p>- G. Personal S/.3.50</p>
+<p>- G. 1 litro S/.7.00</p>
+<p>- G. 1.5 litros S/.10.00</p>
+<p>- G. 2.25 litros S/.13.00</p>
+<p>- G. 3 litros S/.15.00</p>
 </div>
 
-<div class="item" onclick="ver('Inca Kola 1L','Botella mediana','S/.7.00','inca.jpg')">
-<img src="inca.jpg"><span>1 Litro</span><b>S/.7.00</b>
-</div>
+<h2>Cervezas</h2>
 
-<div class="item" onclick="ver('Inca Kola 1.25L','Botella mediana','S/.7.00','inca.jpg')">
-<img src="inca.jpg"><span>1.25 Litros</span><b>S/.7.00</b>
-</div>
-
-<div class="item" onclick="ver('Inca Kola 1.5L','Botella grande','S/.10.00','inca.jpg')">
-<img src="inca.jpg"><span>1.5 Litros</span><b>S/.10.00</b>
-</div>
-
-<div class="item" onclick="ver('Inca Kola 2.25L','Botella familiar','S/.13.00','inca.jpg')">
-<img src="inca.jpg"><span>2.25 Litros</span><b>S/.13.00</b>
-</div>
-
-<div class="item" onclick="ver('Inca Kola 3L','Botella familiar grande','S/.15.00','inca.jpg')">
-<img src="inca.jpg"><span>3 Litros</span><b>S/.15.00</b>
-</div>
-
-<h1>Coca Cola</h1>
-
-<div class="item" onclick="ver('Coca Cola Personal','Botella pequeña','S/.3.50','coca.jpg')">
-<img src="coca.jpg"><span>Personal</span><b>S/.3.50</b>
-</div>
-
-<div class="item" onclick="ver('Coca Cola 1L','Botella mediana','S/.7.00','coca.jpg')">
-<img src="coca.jpg"><span>1 Litro</span><b>S/.7.00</b>
-</div>
-
-<div class="item" onclick="ver('Coca Cola 1.25L','Botella mediana','S/.7.00','coca.jpg')">
-<img src="coca.jpg"><span>1.25 Litros</span><b>S/.7.00</b>
-</div>
-
-<div class="item" onclick="ver('Coca Cola 1.5L','Botella grande','S/.10.00','coca.jpg')">
-<img src="coca.jpg"><span>1.5 Litros</span><b>S/.10.00</b>
-</div>
-
-<div class="item" onclick="ver('Coca Cola 2.25L','Botella familiar','S/.13.00','coca.jpg')">
-<img src="coca.jpg"><span>2.25 Litros</span><b>S/.13.00</b>
-</div>
-
-<div class="item" onclick="ver('Coca Cola 3L','Botella familiar grande','S/.15.00','coca.jpg')">
-<img src="coca.jpg"><span>3 Litros</span><b>S/.15.00</b>
-</div>
-
-<h1>Cervezas</h1>
-
-<div class="item" onclick="ver('Pilsen 750ml','Cerveza clásica','S/.10.00','pilsen.jpg')">
+<div class="item">
 <img src="pilsen.jpg"><span>Pilsen 750ml</span><b>S/.10.00</b>
 </div>
 
-<div class="item" onclick="ver('Cusqueña Trigo','Cerveza premium','S/.12.00','cusquena.jpg')">
+<div class="item">
 <img src="cusquena.jpg"><span>Cusqueña Trigo</span><b>S/.12.00</b>
 </div>
 
-<div class="item" onclick="ver('Corona pequeña','Cerveza importada','S/.8.00','corona.jpg')">
+<div class="item">
 <img src="corona.jpg"><span>Corona</span><b>S/.8.00</b>
 </div>
 
-<h1>Refrescos</h1>
+<h2>Refrescos</h2>
 
-<div class="item" onclick="ver('Chicha Morada','Refresco natural','S/.10.00','chicha.jpg')">
+<div class="item">
 <img src="chicha.jpg"><span>Chicha Morada</span><b>S/.10.00</b>
 </div>
 
+<div class="item">
+<img src="7semillas.jpg"><span>Chicha 7 Semillas</span><b>S/.10.00</b>
 </div>
 
-<!-- MODAL -->
-<div class="modal" id="modal" onclick="cerrar()">
-  <div class="modal-content">
-    <img id="img">
-    <h3 id="titulo"></h3>
-    <p id="desc"></p>
-    <b id="precio"></b>
-  </div>
+<div class="item">
+<img src="limonada.jpg"><span>Limonada Frozen</span><b>S/.10.00</b>
+</div>
+
 </div>
 
 <script>
 function mostrar(sec){
   document.getElementById("inicio").style.display="none";
+  document.getElementById("comidas").style.display="none";
+  document.getElementById("bebidas").style.display="none";
   document.getElementById(sec).style.display="block";
 }
 
@@ -205,18 +201,6 @@ function volver(){
   document.getElementById("inicio").style.display="flex";
   document.getElementById("comidas").style.display="none";
   document.getElementById("bebidas").style.display="none";
-}
-
-function ver(n,d,p,i){
-  document.getElementById("modal").style.display="flex";
-  document.getElementById("titulo").innerText=n;
-  document.getElementById("desc").innerText=d;
-  document.getElementById("precio").innerText=p;
-  document.getElementById("img").src=i;
-}
-
-function cerrar(){
-  document.getElementById("modal").style.display="none";
 }
 </script>
 
